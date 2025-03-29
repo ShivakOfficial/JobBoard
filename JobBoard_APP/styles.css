@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #e3f860;
+    background: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* body {
+    line-height: 1.6;
+    color: #333;
+    background: url('https://images.unsplash.com/photo-1503428593588-13705e6f2f76?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-buttons button {
+    padding: 0.6rem 1.2rem;
+    margin-left: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-buttons button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.home-section {
+    text-align: center;
+    padding: 3rem;
+    min-height: 90vh;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.home-section h1, .home-section p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+h2, h3 {
+    color: #2c3e50;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    padding: 0.8rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.job-listing {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background: #fff;
+    transition: box-shadow 0.3s;
+}
+
+.job-listing:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-listing button {
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-filter {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-filter input, .search-filter select {
+    flex: 1;
+    min-width: 150px;
+}
+
+main {
+    flex: 1;
+}
+
+/* Additional styling for job post form */
+form#jobPostForm {
+    display: grid;
+    gap: 0.5rem;
+}
+
+form#jobPostForm input[type="date"],
+form#jobPostForm input[type="email"],
+form#jobPostForm input[type="url"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+form#jobPostForm input[type="date"]:focus,
+form#jobPostForm input[type="email"]:focus,
+form#jobPostForm input[type="url"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Login/Sign-Up Section Styling */
+.login-section .card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 35px;
+}
+
+.login-section .form-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.login-section .form-control,
+.login-section .form-select {
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-section .form-control:focus,
+.login-section .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.login-section .input-group .btn-outline-secondary {
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.login-section .toggle-password {
+    cursor: pointer;
+}
+
+.login-section .toggle-password:hover i {
+    color: #3498db;
+}
+
+.login-section .invalid-feedback {
+    font-size: 0.9rem;
+    min-height: 1.2rem; /* Prevent layout shift */
+}
+
+.login-section .btn-primary {
+    background-color: #3498db;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-section .btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.login-section .btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-section .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.login-section .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.login-section p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-section p a:hover {
+    text-decoration: underline;
+}
+
+/* Success Stories Styling */
+.home-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-section h2 {
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.success-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.success-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.success-card .card-title {
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+.success-card .card-text {
+    color: #333;
+    font-size: 1rem;
+}
+
+.success-card .text-muted {
+    font-size: 0.9rem;
+}

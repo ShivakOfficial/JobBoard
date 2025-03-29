@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="icon" href="./SHIVA-photoaidcom-cropped.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">JobBoard</div>
+        <div class="nav-buttons" id="navButtons">
+            <button onclick="showHome()">Home</button>
+            <button onclick="showLogin()">Login</button>
+        </div>
+        <div class="nav-buttons hidden" id="logoutSection">
+            <button onclick="showHome()">Home</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Tab -->
+<section id="home" class="tab-content home-section active">
+    <h1>Welcome to JobBoard</h1>
+    <p>Discover exciting career opportunities or post job openings with our easy-to-use platform.</p>
+    
+    <!-- Success Stories Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Success Stories</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Success Story 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Sarah Johnson">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="card-text text-muted">Software Engineer</p>
+                        <p class="card-text">"I landed my dream job at a tech startup through JobBoard within two weeks! The platform’s intuitive search and application process made it so easy."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Michael Chen">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Chen</h5>
+                        <p class="card-text text-muted">Marketing Manager</p>
+                        <p class="card-text">"As a hiring manager, JobBoard helped me find top talent quickly. The detailed applications saved us time in screening candidates."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Emily Rodriguez">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Rodriguez</h5>
+                        <p class="card-text text-muted">Freelance Designer</p>
+                        <p class="card-text">"JobBoard connected me with remote opportunities that matched my skills perfectly. I now enjoy a flexible, fulfilling career!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Story 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Sarah Johnson">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="card-text text-muted">Software Engineer</p>
+                        <p class="card-text">"I landed my dream job at a tech startup through JobBoard within two weeks! The platform’s intuitive search and application process made it so easy."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Michael Chen">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Chen</h5>
+                        <p class="card-text text-muted">Marketing Manager</p>
+                        <p class="card-text">"As a hiring manager, JobBoard helped me find top talent quickly. The detailed applications saved us time in screening candidates."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Emily Rodriguez">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Rodriguez</h5>
+                        <p class="card-text text-muted">Freelance Designer</p>
+                        <p class="card-text">"JobBoard connected me with remote opportunities that matched my skills perfectly. I now enjoy a flexible, fulfilling career!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Story 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Sarah Johnson">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="card-text text-muted">Software Engineer</p>
+                        <p class="card-text">"I landed my dream job at a tech startup through JobBoard within two weeks! The platform’s intuitive search and application process made it so easy."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Michael Chen">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Chen</h5>
+                        <p class="card-text text-muted">Marketing Manager</p>
+                        <p class="card-text">"As a hiring manager, JobBoard helped me find top talent quickly. The detailed applications saved us time in screening candidates."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Story 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm success-card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Emily Rodriguez">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Rodriguez</h5>
+                        <p class="card-text text-muted">Freelance Designer</p>
+                        <p class="card-text">"JobBoard connected me with remote opportunities that matched my skills perfectly. I now enjoy a flexible, fulfilling career!"</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Login Tab -->
+<!-- Login Tab -->
+<section id="login" class="tab-content login-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <!-- Login Form -->
+                <div id="loginFormContainer" class="card shadow-sm p-4">
+                    <h2 class="text-center mb-4">Login to JobBoard</h2>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                            <div class="invalid-feedback" id="usernameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                <button type="button" class="btn btn-outline-secondary toggle-password" onclick="togglePassword('password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userType" class="form-label">User Type</label>
+                            <select class="form-select" id="userType" required>
+                                <option value="" disabled selected>Select user type</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        <a href="#" onclick="showForgotPassword()">Forgot Password?</a> | 
+                        <a href="#" onclick="showSignUp()">Sign Up</a>
+                    </p>
+                </div>
+
+                <!-- Sign-Up Form (Hidden by default) -->
+                <div id="signUpFormContainer" class="card shadow-sm p-4 hidden">
+                    <h2 class="text-center mb-4">Sign Up for JobBoard</h2>
+                    <form id="signUpForm">
+                        <div class="mb-3">
+                            <label for="signUpUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="signUpUsername" placeholder="Choose a username" required>
+                            <div class="invalid-feedback" id="signUpUsernameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                                <button type="button" class="btn btn-outline-secondary toggle-password" onclick="togglePassword('signUpPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback" id="signUpPasswordError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpUserType" class="form-label">User Type</label>
+                            <select class="form-select" id="signUpUserType" required>
+                                <option value="" disabled selected>Select user type</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        <a href="#" onclick="showLogin()" class="back-to-login">Back to Login</a>
+                    </p>
+                </div>
+
+                <!-- Forgot Password Message (Hidden by default) -->
+                <div id="forgotPasswordContainer" class="card shadow-sm p-4 hidden">
+                    <h2 class="text-center mb-4">Forgot Password</h2>
+                    <p class="text-center">Password reset is not implemented yet. Please contact support at <a href="mailto:support@jobboard.com">support@jobboard.com</a>.</p>
+                    <button class="btn btn-secondary w-100" onclick="showLogin()">Back to Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- User Dashboard -->
+<section id="userDashboard" class="tab-content">
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="userName"></span>!</h2>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by title, company, or description..." oninput="filterJobs()">
+            <select id="categoryFilter" onchange="filterJobs()">
+                <option value="">All Categories</option>
+                <option value="IT">IT</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+            </select>
+        </div>
+        <h3>Available Jobs</h3>
+        <div id="jobListings"></div>
+        <div id="applicationForm" class="hidden">
+            <h3>Apply for Job</h3>
+            <form id="jobApplicationForm">
+                <input type="text" id="applyJobTitle" readonly>
+                <input type="text" id="applyCompany" readonly>
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="emailAddress" placeholder="Email Address" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                <textarea id="address" placeholder="Address" required></textarea>
+                <input type="url" id="resumeLink" placeholder="Resume Link (e.g., Google Drive URL)" required>
+                <textarea id="coverLetter" placeholder="Cover Letter" required></textarea>
+                <input type="number" id="yearsExperience" placeholder="Years of Experience" min="0" required>
+                <select id="highestEducation" required>
+                    <option value="">Select Highest Education</option>
+                    <option value="High School">High School</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="Master's">Master's</option>
+                    <option value="PhD">PhD</option>
+                </select>
+                <input type="text" id="currentJobTitle" placeholder="Current Job Title">
+                <input type="text" id="currentEmployer" placeholder="Current Employer">
+                <input type="date" id="availabilityDate" placeholder="Availability Date" required>
+                <input type="url" id="linkedinProfile" placeholder="LinkedIn Profile URL">
+                <input type="url" id="portfolioLink" placeholder="Portfolio Link URL">
+                <textarea id="references" placeholder="References (Name, Contact)"></textarea>
+                <textarea id="additionalComments" placeholder="Additional Comments"></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+            <p id="applicationMessage" class="hidden" style="color: green; margin-top: 1rem;">Successfully Applied!</p>
+        </div>
+        <h3>Your Applications</h3>
+        <div id="applicationHistory"></div>
+    </div>
+</section>
+        <!-- User Dashboard
+        <section id="userDashboard" class="tab-content">
+            <div class="dashboard-container">
+                <h2>Welcome, <span id="userName"></span>!</h2>
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search by title, company, or description..." oninput="filterJobs()">
+                    <select id="categoryFilter" onchange="filterJobs()">
+                        <option value="">All Categories</option>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Finance">Finance</option>
+                    </select>
+                </div>
+                <h3>Available Jobs</h3>
+                <div id="jobListings"></div>
+                <div id="applicationForm" class="hidden">
+                    <h3>Apply for Job</h3>
+                    <form id="jobApplicationForm">
+                        <input type="text" id="applyJobTitle" readonly>
+                        <input type="text" id="applyCompany" readonly>
+                        <textarea id="qualifications" placeholder="Your Qualifications" required></textarea>
+                        <button type="submit">Submit Application</button>
+                    </form>
+                </div>
+                <h3>Your Applications</h3>
+                <div id="applicationHistory"></div>
+            </div>
+        </section> -->
+
+        <!-- Admin Dashboard -->
+        <!-- <section id="adminDashboard" class="tab-content">
+            <div class="dashboard-container">
+                <h2>Admin Dashboard</h2>
+                <form id="jobPostForm">
+                    <input type="text" id="jobTitle" placeholder="Job Title" required>
+                    <input type="text" id="companyName" placeholder="Company Name" required>
+                    <select id="jobCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Finance">Finance</option>
+                    </select>
+                    <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+                    <button type="submit">Post Job</button>
+                </form>
+                <h3>Posted Jobs</h3>
+                <div id="adminJobListings"></div>
+            </div>
+        </section> -->
+        <!-- Admin Dashboard -->
+<section id="adminDashboard" class="tab-content">
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <form id="jobPostForm">
+            <input type="text" id="jobTitle" placeholder="Job Title" required>
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <select id="jobCategory" required>
+                <option value="">Select Category</option>
+                <option value="IT">IT</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+            </select>
+            <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+            <input type="text" id="location" placeholder="Location (e.g., New York, NY)" required>
+            <input type="text" id="salaryRange" placeholder="Salary Range (e.g., $50k - $70k)" required>
+            <select id="jobType" required>
+                <option value="">Select Job Type</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+            </select>
+            <select id="experienceLevel" required>
+                <option value="">Select Experience Level</option>
+                <option value="Entry">Entry</option>
+                <option value="Mid">Mid</option>
+                <option value="Senior">Senior</option>
+            </select>
+            <input type="date" id="applicationDeadline" required>
+            <input type="email" id="contactEmail" placeholder="Contact Email" required>
+            <input type="url" id="companyWebsite" placeholder="Company Website (e.g., https://example.com)">
+            <textarea id="requiredSkills" placeholder="Required Skills (comma-separated)" required></textarea>
+            <textarea id="benefits" placeholder="Benefits (comma-separated)"></textarea>
+            <select id="remoteWork" required>
+                <option value="">Remote Work Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+            <button type="submit">Post Job</button>
+        </form>
+        <h3>Posted Jobs</h3>
+        <div id="adminJobListings"></div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <div class="me-5">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-google"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">JobBoard</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>Your one-stop platform for finding and posting job opportunities.</p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Categories</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-white">IT</a></p>
+                        <p><a href="#!" class="text-white">Marketing</a></p>
+                        <p><a href="#!" class="text-white">Finance</a></p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-white">Your Account</a></p>
+                        <p><a href="#!" class="text-white">Post a Job</a></p>
+                        <p><a href="#!" class="text-white">Help</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> Bengaluru, Karnataka 580076, India</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@jobboard.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2025 Copyright:
+            <a class="text-white" href="#">JobBoard.com</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+     
+    <script src="script.js"></script>
+    <!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS Public Key
+    })();
+</script>
+</body>
+</html>
